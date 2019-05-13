@@ -288,6 +288,8 @@ int main() {
 
         // b. Afficher ce tableau en écrivant le moins de code possible
         parcourire(fibo, 5, put);
+
+        free(fibo);
     }
     return 0;
 }
