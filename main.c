@@ -4,7 +4,7 @@
 
 const   int     CONST_INT   = 3;
         int     entier      = 12;
-        float   reel      = 3.14f;
+        float   reel        = 3.14f;
 
 
 void parcourire(int tab[], size_t size, void(*traitement)(int*)) {
@@ -22,8 +22,8 @@ void put(int* ptrx) {
     printf("%d\n", *ptrx);
 }
 
-void pswap(int* lhs, int* rhs) {
-    int tmp = *lhs;
+void pswap(int** lhs, int** rhs) {
+    int* tmp = *lhs;
 
     *lhs = *rhs;
     *rhs = tmp;
@@ -270,7 +270,7 @@ int main() {
         printf("i = %d, j = %d\n", *pi, *pj);
 
         // d. Echanger le contenu des deux pointeurs
-        pswap(pi, pj);
+        pswap(&pi, &pj);
 
         // e. Afficher les valeurs pointées
         printf("i = %d, j = %d\n", *pi, *pj);
